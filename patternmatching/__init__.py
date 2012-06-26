@@ -58,12 +58,12 @@ class _Matcher(_Marker):
         return self.__eq__(x)
 
 
-class _ANY(_Matcher):
+class _Any(_Matcher):
     name = 'ANY'
 
     def __eq__(self, x):
         return True
-ANY = _ANY()
+ANY = _Any()
 
 
 def IGNORE(x):
@@ -87,9 +87,9 @@ class IS_INSTANCE(_Matcher):
         return type(self)(self.t)
 
 
-class _NOTHING(_Marker):
+class _Nothing(_Marker):
     name = 'NOTHING'
-NOTHING = _NOTHING()
+NOTHING = _Nothing()
 
 
 class Match(_Matcher):
